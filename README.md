@@ -1,4 +1,4 @@
-# pylogtrace
+# PyLogTrace
 Trace python program from log perspective.
 
 This is modified version of trace module of python3.
