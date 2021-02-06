@@ -617,7 +617,7 @@ class Trace:
                     if not ignore_it:
                         if self.trace:
 
-                            # hole 
+                            # hole: Note this one is early code, not expect to use. Use bottom only. 
                             ccn = code.co_name
                             # When modify, be careful it `return self.localtrace` unlike another one which only `return`
                             if ('print(' not in ccn) and ('.write(' not in ccn): 
@@ -802,6 +802,8 @@ class Trace:
                 #debug_f= '/usr/lib/python3/dist-packages/pip/_internal/commands/install.py'
                 #debug_f = '/usr/lib/python3/dist-packages/pip/_internal/cli/base_command.py'
                 #debug_f = '/usr/lib/python3/dist-packages/pip/_internal/req/req_install.py'
+                #debug_f = '/home/xiaobai/.local/lib/python3.8/site-packages/you_get/extractor.py'
+                # Note 1: Possible multiple print() get combine and so only print top print() code
 
                 if not printed_same:
 
@@ -877,14 +879,14 @@ class Trace:
                     #, Fore.LIGHTRED_EX
                     cprint( ''.join([ '\x1b[0m\x1b[K\x1b[6;42m', Fore.BLACK, ' #', str(ei - skip_index + 1), ' [ NEW ] ' ]), attrs=BOLD_ONLY, end='')
                     #tag = '\x1b[5m\x1b[6;32m#' + str(ei - skip_index + 1) + ' [ New ]'
-                   
+                    
+                # Possible sys.stderr.write output on top first instead of bottom of round, so put flush=True here
                 if s.code_context: # possible None for top 2 func, at `shutil.make_archive(epub_name_with_path, 'zip', self.EPUB_DIR)` which involved shutil.py and zipfile.py
                     cprint("\x1b[0m\x1b[K \x1b[17;36m%s\x1b[0m\x1b[K\n       \x1b[7;36m(%d): %s %s\x1b[0m\x1b[K" % (s.filename, s.lineno,
-                                Fore.LIGHTWHITE_EX, '\n'.join(s.code_context)), end='\n')
+                                Fore.LIGHTWHITE_EX, '\n'.join(s.code_context)), end='\n', flush=True)
                 else:
                     cprint("\x1b[0m\x1b[K \x1b[17;36m%s\x1b[0m\x1b[K\n       \x1b[7;36m(%d): %s %s\x1b[0m\x1b[K" % (s.filename, s.lineno,
-                                Fore.LIGHTWHITE_EX, '<None>'), end='\n')
-
+                                Fore.LIGHTWHITE_EX, '<None>'), end='\n', flush=True)
 
 
             #for cr in self.curr_ist:
