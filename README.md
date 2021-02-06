@@ -3,7 +3,7 @@ Trace python program from log perspective.
 
 This is modified version of trace module of python3.
 
-Log alone itself provide little value, we need to know the log come from. 
+Log alone itself provide little value, we need to know where the log come from. 
 
 This script only print stack related to output(i.e. `.write`, `logging`, `print`, `cprint`) of program
 , instead of whole bunch of useless trace.
