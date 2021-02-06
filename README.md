@@ -8,9 +8,9 @@ Log alone itself provide little value, we need to know the log come from.
 This script only print stack related to output(i.e. `.write`, `logging`, `print`, `cprint`) of program
 , instead of whole bunch of useless trace.
 
-It also skip low level of logging and trace log to reduce noise.
+It also skips low level of logging and trace log to reduce noise.
 
-It also mark [ EQU ] if specific line is duplicated with previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
+It also mark [ EQU ] if specific line is duplicated with the previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
 
 ### Example Usage:
 
