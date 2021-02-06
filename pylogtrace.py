@@ -877,9 +877,14 @@ class Trace:
                     #, Fore.LIGHTRED_EX
                     cprint( ''.join([ '\x1b[0m\x1b[K\x1b[6;42m', Fore.BLACK, ' #', str(ei - skip_index + 1), ' [ NEW ] ' ]), attrs=BOLD_ONLY, end='')
                     #tag = '\x1b[5m\x1b[6;32m#' + str(ei - skip_index + 1) + ' [ New ]'
-                    
-                cprint("\x1b[0m\x1b[K \x1b[17;36m%s\x1b[0m\x1b[K\n       \x1b[7;36m(%d): %s %s\x1b[0m\x1b[K" % (s.filename, s.lineno,
-                                Fore.LIGHTWHITE_EX, '\n'.join(s.code_context)), end='')
+                   
+                if s.code_context: # possible None for top 2 func, at `shutil.make_archive(epub_name_with_path, 'zip', self.EPUB_DIR)` which involved shutil.py and zipfile.py
+                    cprint("\x1b[0m\x1b[K \x1b[17;36m%s\x1b[0m\x1b[K\n       \x1b[7;36m(%d): %s %s\x1b[0m\x1b[K" % (s.filename, s.lineno,
+                                Fore.LIGHTWHITE_EX, '\n'.join(s.code_context)), end='\n')
+                else:
+                    cprint("\x1b[0m\x1b[K \x1b[17;36m%s\x1b[0m\x1b[K\n       \x1b[7;36m(%d): %s %s\x1b[0m\x1b[K" % (s.filename, s.lineno,
+                                Fore.LIGHTWHITE_EX, '<None>'), end='\n')
+
 
 
             #for cr in self.curr_ist:
