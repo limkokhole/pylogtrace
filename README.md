@@ -19,7 +19,8 @@ It also mark [ EQU ] if specific line is duplicated with the previous round (# i
     $ python3 -u /tmp/pylogtrace.py --trace -g -t /home/xiaobai/.local/bin/you-get 'https://www.youtube.com/watch?v=4vQ8If7f374'
     $ python3 -u /tmp/pylogtrace.py --trace -g -t ~/Downloads/youtube-dl/3/bin/youtube-dl -i -c --no-mtime -o './%(title)s-%(upload_date)s-%(id)s.%(ext)s' 'https://www.youtube.com/watch?v=4vQ8If7f374'
 
-And ensure resolve the script path if you get `No module named` error, e.g. you should run with `/usr/share/streamlink/streamlink` instead of `/usr/bin/streamlink`:
+And ensure resolve the script path if you get `No module named` error, e.g. you should run with `/usr/share/streamlink/streamlink` instead of `/usr/bin/streamlink`:  
+
     $ type -a streamlink
     streamlink is /usr/bin/streamlink
     $ realpath /usr/bin/streamlink
