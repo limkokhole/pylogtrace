@@ -10,7 +10,7 @@ This script only print stack related to output(i.e. `.write`, `logging`, `print`
 
 It also skips low level of logging and trace log to reduce noise.
 
-It also mark [ EQU ] if specific line is duplicated with the previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
+Each log tied with a stack or so called "a round". It also mark [ EQU ] if specific line is duplicated with the previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
 
 ### Example Usage:
 
@@ -34,6 +34,8 @@ And ensure resolve the script path if you get `No module named` error, e.g. you 
 ...
 
  ![Trace pip error 2](https://1.bp.blogspot.com/-e_7CnkHSkZ0/YCBLiKqeP5I/AAAAAAAAv9c/lZxNQJks4rAyokuzjkGotEela1XVYBOnACLcBGAsYHQ/s1006/1612729104_2021-02-08_nMwiCVGIsl.png "Trace pip error 2")
+
+`#2 [ EQU] == Previous #8 - #10` is means the below log stacks range duplicated with previous log stacks range #8 until #10, while on top is the [ NEW ]/new log stacks in this round.
 
 ### Demo video (Click image to play at YouTube):
 
