@@ -27,7 +27,7 @@ And ensure resolve the script path if you get `No module named` error, e.g. you 
     /usr/share/streamlink/streamlink
 
 ### Demo Screenshot 
-##### (pip install non existent package will throws error, whit the help of this script, we can quickly know the error in which source code file+line to know the reason of pip installation failed. Btw, you can use pip -vvv to get verbose output):
+##### (pip install non existent package will throws error, with the help of this script, we can quickly know the error in which source code file+line to know the reason of pip installation failed. Btw, you can use pip -vvv to get verbose output):
 
  ![Trace pip error](https://1.bp.blogspot.com/-Mg9YUbUClEM/YCBLU4TMfdI/AAAAAAAAv9Y/QqXphACEQggtU6zVI8fcJvk693sJWrdvwCLcBGAsYHQ/s1366/1612729092_2021-02-08_FsUeEqfhGE.png "Trace pip error")
 
