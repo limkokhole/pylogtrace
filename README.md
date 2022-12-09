@@ -10,7 +10,7 @@ This script only print stack related to output(i.e. `.write`, `logging`, `print`
 
 It also skips low level of logging and trace log to reduce noise.
 
-Each log tied with a stack or so called "a round". It also mark [ EQU ] if specific line is duplicated with the previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
+Each log tied with a stack or so called "a round" with #1-Nth index. It also mark [ EQU ] if specific line is duplicated with the previous round (# is the number of line of specific stack). Mark line as [ NEW ] conversely.
 
 ### Example Usage:
 
