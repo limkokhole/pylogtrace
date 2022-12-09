@@ -35,7 +35,7 @@ And ensure resolve the script path if you get `No module named` error, e.g. you 
 
  ![Trace pip error 2](https://1.bp.blogspot.com/-e_7CnkHSkZ0/YCBLiKqeP5I/AAAAAAAAv9c/lZxNQJks4rAyokuzjkGotEela1XVYBOnACLcBGAsYHQ/s1006/1612729104_2021-02-08_nMwiCVGIsl.png "Trace pip error 2")
 
-`#2 [ EQU] == Previous #8 - #10` is means the below log stacks range #2 until #4 are duplicated with previous log stacks range #8 until #10, while on top is the [ NEW ]/new log stacks in this round.
+`#2 [ EQU] == Previous #8 - #10` is means the below log stacks range #2 until #4 are duplicated with previous log stacks range #8 until #10, while on top is the [ NEW ]/new log stacks in this round compare with previous round.
 
 ### Demo video (Click image to play at YouTube):
 
