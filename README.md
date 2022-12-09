@@ -3,10 +3,10 @@ Trace python program from log perspective.
 
 This is modified version of trace module of python3.
 
-Log alone itself provide little value, we need to know where the log come from. 
+Sometime we need to know where the log come from in order to learn and debug a program quickly. This script show the code stacks together with the output log with mnimized noisiness.
 
 This script only print stack related to output(i.e. `.write`, `logging`, `print`, `cprint`) of program
-, instead of whole bunch of useless trace.
+, instead of whole bunch of noisiness trace.
 
 It also skips low level of logging and trace log to reduce noise.
 
