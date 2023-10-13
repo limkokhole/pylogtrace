@@ -39,3 +39,13 @@ If you encounter a `No module named` error, ensure that you resolve the script p
 ### Demo video (Click image to play at YouTube):
 
 [![watch in youtube](https://i.ytimg.com/vi/LjOyqPW4p8U/hqdefault.jpg)](https://www.youtube.com/watch?v=LjOyqPW4p8U "PyLogTrace")
+
+
+### Limitation  
+Since this script was modified from the `trace` module, it shares the same issues with `unittest`. For more information, refer to the following links:  
+
+- [StackOverflow Discussion](https://stackoverflow.com/questions/23691509/unittest-py-doesnt-play-well-with-trace-py-why)
+- [GitHub Issue](https://github.com/pytest-dev/pytest/issues/3823)
+
+### Alternative 
+- [traceprint](https://github.com/morefigs/traceprint) 
